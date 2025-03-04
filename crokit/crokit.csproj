@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\add.png" />
+    <None Remove="Resources\close.png" />
+    <None Remove="Resources\keep.png" />
+    <None Remove="Resources\keep_off.png" />
+    <None Remove="Resources\list.png" />
+    <None Remove="Resources\pause.png" />
+    <None Remove="Resources\play_arrow.png" />
+    <None Remove="Resources\settings.png" />
+    <None Remove="Resources\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\add.png" />
+    <Resource Include="Resources\close.png" />
+    <Resource Include="Resources\keep.png" />
+    <Resource Include="Resources\keep_off.png" />
+    <Resource Include="Resources\list.png" />
+    <Resource Include="Resources\pause.png" />
+    <Resource Include="Resources\play_arrow.png" />
+    <Resource Include="Resources\settings.png" />
+    <Resource Include="Resources\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
