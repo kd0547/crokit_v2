@@ -1,4 +1,5 @@
-﻿using crokit.util;
+﻿using ControlzEx.Standard;
+using crokit.util;
 using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -50,8 +52,21 @@ namespace crokit
             ResizeCursorHelper.UpdateResizeCursor(this, sender, e);
         }
 
+        private void TextBox_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                string text = textBox.Text;
 
-
-
+                if (text.Length == 1)
+                {
+                    textBox.Text = text.PadLeft(2, '0');
+                }
+                else if (text.Length == 0)
+                {
+                    textBox.Text = "00";
+                }
+                }
+        }
     }
 }

@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\",
+  "WorkspaceRootPath": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\dawon\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\timermodelview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\timermodelview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\dawon\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\inversebooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\inversebooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\dawon\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\util\\dragselectionadorner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\util\\dragselectionadorner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\dawon\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\timerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\dawon\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\startcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\startcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,75 +30,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 237,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\App.xaml",
-              "RelativeDocumentMoniker": "crokit\\App.xaml",
-              "ToolTip": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\App.xaml",
-              "RelativeToolTip": "crokit\\App.xaml",
+              "DocumentIndex": 1,
+              "Title": "InverseBooleanConverter.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\InverseBooleanConverter.cs",
+              "RelativeDocumentMoniker": "crokit\\Timer\\InverseBooleanConverter.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\InverseBooleanConverter.cs",
+              "RelativeToolTip": "crokit\\Timer\\InverseBooleanConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:53:40.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TimerWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\TimerWindow.xaml",
+              "RelativeDocumentMoniker": "crokit\\TimerWindow.xaml",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\TimerWindow.xaml",
+              "RelativeToolTip": "crokit\\TimerWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-15T09:57:47.482Z",
+              "WhenOpened": "2025-04-09T08:51:41.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "crokit\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\MainWindow.xaml",
-              "RelativeToolTip": "crokit\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-15T09:34:52.999Z",
+              "Title": "TimerModelView.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\TimerModelView.cs",
+              "RelativeDocumentMoniker": "crokit\\Timer\\TimerModelView.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\TimerModelView.cs",
+              "RelativeToolTip": "crokit\\Timer\\TimerModelView.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAcwFIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:24:34.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StartCommand.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\StartCommand.cs",
+              "RelativeDocumentMoniker": "crokit\\Timer\\StartCommand.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\StartCommand.cs",
+              "RelativeToolTip": "crokit\\Timer\\StartCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:24:32.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TimerWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\TimerWindow.xaml",
-              "RelativeDocumentMoniker": "crokit\\TimerWindow.xaml",
-              "ToolTip": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\TimerWindow.xaml",
-              "RelativeToolTip": "crokit\\TimerWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-15T09:34:45.511Z",
+              "Title": "TimerWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\TimerWindow.xaml.cs",
+              "RelativeDocumentMoniker": "crokit\\TimerWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\TimerWindow.xaml.cs",
+              "RelativeToolTip": "crokit\\TimerWindow.xaml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:24:21.555Z",
               "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 376,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DragSelectionAdorner.cs",
-              "DocumentMoniker": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\util\\DragSelectionAdorner.cs",
-              "RelativeDocumentMoniker": "crokit\\util\\DragSelectionAdorner.cs",
-              "ToolTip": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\util\\DragSelectionAdorner.cs",
-              "RelativeToolTip": "crokit\\util\\DragSelectionAdorner.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T13:55:56.067Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "crokit\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\dawon\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\crokit\\crokit\\MainWindow.xaml.cs",
-              "RelativeToolTip": "crokit\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAYwEQAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T11:51:14.319Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

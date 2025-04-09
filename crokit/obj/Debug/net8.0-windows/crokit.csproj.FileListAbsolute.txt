@@ -29,3 +29,36 @@ C:\Users\dawon\OneDrive\바탕 화면\crokit\crokit\obj\Debug\net8.0-windows\ref
 C:\Users\dawon\OneDrive\바탕 화면\crokit\crokit\obj\Debug\net8.0-windows\crokit.pdb
 C:\Users\dawon\OneDrive\바탕 화면\crokit\crokit\obj\Debug\net8.0-windows\crokit.genruntimeconfig.cache
 C:\Users\dawon\OneDrive\바탕 화면\crokit\crokit\obj\Debug\net8.0-windows\ref\crokit.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\crokit.exe
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\crokit.deps.json
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\crokit.runtimeconfig.json
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\crokit.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\crokit.pdb
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\ControlzEx.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\MahApps.Metro.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\bin\Debug\net8.0-windows\de\MahApps.Metro.resources.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.csproj.AssemblyReference.cache
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\TimerWindow.g.cs
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit_MarkupCompile.cache
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit_MarkupCompile.lref
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\App.baml
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\TimerWindow.baml
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.g.resources
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.Resource.resources
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.csproj.GenerateResource.cache
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.AssemblyInfoInputs.cache
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.AssemblyInfo.cs
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.csproj.CoreCompileInputs.cache
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.sourcelink.json
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.csproj.Up2Date
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\refint\crokit.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.pdb
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.genruntimeconfig.cache
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\ref\crokit.dll
+C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

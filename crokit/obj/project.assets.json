@@ -186,23 +186,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dawon\\.nuget\\packages\\": {},
+    "C:\\Users\\김동욱\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\crokit\\crokit\\crokit.csproj",
+      "projectUniqueName": "C:\\Users\\김동욱\\Desktop\\crokit_v2\\crokit\\crokit.csproj",
       "projectName": "crokit",
-      "projectPath": "F:\\crokit\\crokit\\crokit.csproj",
-      "packagesPath": "C:\\Users\\dawon\\.nuget\\packages\\",
-      "outputPath": "F:\\crokit\\crokit\\obj\\",
+      "projectPath": "C:\\Users\\김동욱\\Desktop\\crokit_v2\\crokit\\crokit.csproj",
+      "packagesPath": "C:\\Users\\김동욱\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\김동욱\\Desktop\\crokit_v2\\crokit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\dawon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\김동욱\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
