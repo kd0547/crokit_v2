@@ -1,4 +1,6 @@
-﻿using crokit.util;
+﻿using crokit.image;
+using crokit.Timer;
+using crokit.util;
 using Microsoft.Win32;
 using System.Collections;
 using System.Collections.ObjectModel;
@@ -23,19 +25,34 @@ namespace crokit
         private Point selectionStart;
         private DragSelectionAdorner selectionAdorner;
         private AdornerLayer adornerLayer;
-        public ObservableCollection<string> UserImages { get; set; } = new ObservableCollection<string>();
-
         List<Border> borderList;
+        private TimerPlayer timerPlayer;
+        private TimerWindow timerWindow;
+
+        private TimerViewModel timerViewModel;
+        private ImageViewModel imageViewModel;
+        private CroquisPlayer croquisPlayer;
 
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = this;
 
-            TimerWindow timerWindow = new TimerWindow();
-            timerWindow.Show();
+            imageViewModel = new ImageViewModel();
+            imageViewModel.RequestImageLoad = OpenImageDialog;
+            DataContext = imageViewModel;
+
+            timerPlayer = new TimerPlayer();
+            timerViewModel = new TimerViewModel(timerPlayer);
+
+            timerWindow = new TimerWindow();
+            timerWindow.DataContext = timerViewModel;
+
+            CroquisPlayer corquisPlayer = new CroquisPlayer();
+
 
         }
+
+
 
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
@@ -53,7 +70,7 @@ namespace crokit
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void OpenImageDialog()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
@@ -64,10 +81,10 @@ namespace crokit
             bool? result = openFileDialog.ShowDialog();
             if (result == true) 
             {
-                foreach (var file in openFileDialog.FileNames)
+                var vm = DataContext as ImageViewModel;
+                if (vm != null)
                 {
-                    UserImages.Add(file);
-
+                    vm?.AddImage(openFileDialog.FileNames);
                 }
             }
         }
@@ -180,6 +197,13 @@ namespace crokit
                     return childOfChild;
             }
             return null;
+        }
+     
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+            timerWindow.Show();
+            
         }
     }
 }

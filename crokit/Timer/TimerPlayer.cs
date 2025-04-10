@@ -8,12 +8,10 @@ using System.Windows.Threading;
 
 namespace crokit.Timer
 {
-    class TimerPlayer
+    public class TimerPlayer
     {
         private DispatcherTimer _timer;
         private TimeSpan _remaining;
-
-        public TimerModelView timerModelView;
 
         public Action? OnTick;           // 매 초마다 호출
         public Action? OnCompleted;      // 타이머 종료 시 호출
@@ -22,22 +20,22 @@ namespace crokit.Timer
                 get => _remaining;
         }
 
-        public TimerPlayer(TimerModelView view)
-        {
-            this.timerModelView = view;
-        }
 
-        public void StartTimer(int hour,int minute,int second) 
+        public void SetTimer(int hour,int minute,int second) 
         {
             _remaining = new TimeSpan(hour, minute, second);
             _timer = new DispatcherTimer
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
-
             _timer.Tick += Timer_Tick;
+        }
+
+        public void StartTimer()
+        {
             _timer.Start();
         }
+  
 
         public void Stoptimer()
         {

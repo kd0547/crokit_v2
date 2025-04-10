@@ -1,4 +1,5 @@
 ﻿using ControlzEx.Standard;
+using crokit.Timer;
 using crokit.util;
 using MahApps.Metro.Controls;
 using System;
@@ -26,11 +27,14 @@ namespace crokit
     /// </summary>
     public partial class TimerWindow : Window
     {
+
         public TimerWindow()
         {
             InitializeComponent();
-            
         }
+
+
+
 
         private void Border_MouseMove(object sender, MouseEventArgs e)
         {

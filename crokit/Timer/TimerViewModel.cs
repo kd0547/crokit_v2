@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.RightsManagement;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -12,9 +13,16 @@ using System.Windows.Input;
 
 namespace crokit.Timer
 {
-    class TimerModelView : INotifyPropertyChanged
+    public class TimerViewModel : INotifyPropertyChanged
     {
         public ICommand StartCommand { get; }
+        public ICommand PauseCommand { get; }
+
+        public ICommand StopCommand { get; }
+
+        public Action? OnStart;
+        public Action? OnPause;
+        public Action? OnStop;
 
         //타이머 설정 활성화/비활성화
         private bool _isTimeEditable = true;
@@ -22,9 +30,26 @@ namespace crokit.Timer
             get { return _isTimeEditable; }
             set { 
                 _isTimeEditable = value;
+                OnPropertyChanged();
             }
         }
-
+        private bool _isRunning;
+        public bool IsRunning
+        {
+            get { return _isRunning; }
+            set
+            {
+                _isRunning = value;
+                OnPropertyChanged();
+                RaiseCommandStates();
+            }
+        }
+        private void RaiseCommandStates()
+        {
+            (StartCommand as StartCommand)?.RaiseCanExecuteChanged();
+            (PauseCommand as StartCommand)?.RaiseCanExecuteChanged();
+            (StopCommand as StartCommand)?.RaiseCanExecuteChanged();
+        }
         private string _hour = "00";
 
         public string Hour { 
@@ -71,11 +96,13 @@ namespace crokit.Timer
             }
         }
         private TimerPlayer _timer { get; set; }
-        public TimerModelView()
+        public TimerViewModel(TimerPlayer timerPlayer)
         {
-            _timer = new TimerPlayer(this);
+            _timer = timerPlayer;
             _timer.OnTick = ShowTimer;
-            StartCommand = new StartCommand(Start, () => !(Hour == "00" && Minute == "00" && Seconds == "00"));
+            StartCommand = new StartCommand(Start, () => (!(Hour == "00" && Minute == "00" && Seconds == "00") && !IsRunning));
+            PauseCommand = new StartCommand(Pause, () => IsRunning);
+            StopCommand = new StartCommand(Stop, () => IsRunning || !_isStop);
         }
 
         public void Start()
@@ -84,7 +111,64 @@ namespace crokit.Timer
             int h = int.Parse(Hour);
             int m = int.Parse(Minute);
             int s = int.Parse(Seconds);
-            _timer.StartTimer(h, m, s);
+            _timer.SetTimer(h, m, s);
+
+            SaveTime(h, m, s);
+            IsRunning = true;
+
+            OnStart?.Invoke();
+        }
+
+        private bool _isStop = true;
+
+        private void SaveTime(int h, int m, int s)
+        {
+            if(_isStop) {
+                _saveHour = h;
+                _saveMinute = m;
+                _saveSecond = s;
+                _isStop = false;
+            }
+        }
+
+
+        public void Pause()
+        {
+
+            if (_timer == null)
+            {
+                return;
+            }
+            IsTimeEditable = true;
+            IsRunning = false;
+            //_timer.Stoptimer();
+            OnPause?.Invoke();
+
+        }
+
+        private int _saveHour = 0;
+        private int _saveMinute = 0;
+        private int _saveSecond = 0;
+
+        public void Stop()
+        {
+            if (_timer == null)
+                return;
+            IsRunning = false;
+            OnStop?.Invoke();
+            IsTimeEditable = true;
+            ReloadTime(_saveHour, _saveMinute, _saveSecond);
+
+        }
+
+        private void ReloadTime(int saveHour, int saveMinute, int saveSecond)
+        {
+            if (!_isStop) 
+            {
+                Hour = saveHour.ToString("D2");
+                Minute = saveMinute.ToString("D2");
+                Seconds = saveSecond.ToString("D2");
+            }
         }
 
         public void ShowTimer()
