@@ -102,7 +102,7 @@ namespace crokit.Timer
             _timer.OnTick = ShowTimer;
             StartCommand = new StartCommand(Start, () => (!(Hour == "00" && Minute == "00" && Seconds == "00") && !IsRunning));
             PauseCommand = new StartCommand(Pause, () => IsRunning );
-            StopCommand = new StartCommand(Stop, () => IsRunning || _timer.Pasused);
+            StopCommand = new StartCommand(Stop, () => IsRunning || _isPaused);
         }
 
         public void Start()
@@ -119,6 +119,7 @@ namespace crokit.Timer
         }
 
         private bool _isStop = true;
+        private bool _isPaused = false;
         private void SaveTime()
         {
             if(_isStop) {
@@ -134,6 +135,7 @@ namespace crokit.Timer
             {
                 return;
             }
+            _isPaused = true;
             IsTimeEditable = true;
             IsRunning = false;
             OnPause?.Invoke();
@@ -142,9 +144,10 @@ namespace crokit.Timer
         public void Finish()
         {
             IsRunning = false;
+            _isPaused = true;
             IsTimeEditable = true;
             ReloadTime(_timer.SaveHour, _timer.SaveMinute, _timer.SaveSecond);
-
+            _isStop = true;
         }
 
         public void Stop()
@@ -155,6 +158,8 @@ namespace crokit.Timer
             OnStop?.Invoke();
             IsTimeEditable = true;
             ReloadTime(_timer.SaveHour, _timer.SaveMinute, _timer.SaveSecond);
+            _isStop = true;
+
         }
 
         private void ReloadTime(int saveHour, int saveMinute, int saveSecond)

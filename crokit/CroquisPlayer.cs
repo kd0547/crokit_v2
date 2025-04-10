@@ -52,7 +52,7 @@ namespace crokit
                     return;
                 }
                 _timerPlayer.StartTimer();
-                Debug.WriteLine(i);
+                Debug.WriteLine($"i: {i}, ThreadID: {System.Threading.Thread.CurrentThread.ManagedThreadId}");
 
                 await _timerPlayer.WaitUntilFinishedAsync();
             }

@@ -86,7 +86,10 @@ namespace crokit.Timer
         public void StopTimer()
         {
             _timer.Stop();
-            _tcs?.TrySetResult(true); // 타이머 완료 통지
+            if (_tcs != null && !_tcs.Task.IsCompleted)
+            {
+                _tcs.TrySetResult(true);
+            }
             _remaining = _originTime;
             _paused = false;
             _tcs = null;
@@ -105,7 +108,10 @@ namespace crokit.Timer
             {
                 _timer.Stop();
                 _paused = false;
-                _tcs?.TrySetResult(true); // 타이머 완료 통지
+                if (_tcs != null && !_tcs.Task.IsCompleted)
+                {
+                    _tcs.TrySetResult(true);
+                }
                 Debug.WriteLine("타이머 끝!");
                 return;
             }
