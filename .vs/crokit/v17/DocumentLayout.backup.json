@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\timermodelview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\timermodelview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\timerplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\timerplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\inversebooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\inversebooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\timerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\timerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\startcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\startcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\icroquisflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\icroquisflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\croquisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\croquisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\timer\\startcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\timer\\startcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|c:\\users\\\uAE40\uB3D9\uC6B1\\desktop\\crokit_v2\\crokit\\image\\imageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB53341-022C-48C5-A52A-75CB78930460}|crokit\\crokit.csproj|solutionrelative:crokit\\image\\imageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,74 +42,109 @@
       "DocumentGroups": [
         {
           "DockedWidth": 237,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InverseBooleanConverter.cs",
-              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\InverseBooleanConverter.cs",
-              "RelativeDocumentMoniker": "crokit\\Timer\\InverseBooleanConverter.cs",
-              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\InverseBooleanConverter.cs",
-              "RelativeToolTip": "crokit\\Timer\\InverseBooleanConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "StartCommand.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\StartCommand.cs",
+              "RelativeDocumentMoniker": "crokit\\Timer\\StartCommand.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\StartCommand.cs",
+              "RelativeToolTip": "crokit\\Timer\\StartCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T08:53:40.49Z",
+              "WhenOpened": "2025-04-10T08:47:19.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "ICroquisFlow.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\ICroquisFlow.cs",
+              "RelativeDocumentMoniker": "crokit\\Timer\\ICroquisFlow.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\ICroquisFlow.cs",
+              "RelativeToolTip": "crokit\\Timer\\ICroquisFlow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T08:46:50.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "crokit\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\MainWindow.xaml.cs",
+              "RelativeToolTip": "crokit\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAADwvx8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T08:30:19.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TimerWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\TimerWindow.xaml",
               "RelativeDocumentMoniker": "crokit\\TimerWindow.xaml",
               "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\TimerWindow.xaml",
               "RelativeToolTip": "crokit\\TimerWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-09T08:51:41.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TimerModelView.cs",
-              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\TimerModelView.cs",
-              "RelativeDocumentMoniker": "crokit\\Timer\\TimerModelView.cs",
-              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\TimerModelView.cs",
-              "RelativeToolTip": "crokit\\Timer\\TimerModelView.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAcwFIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T08:24:34.037Z",
+              "WhenOpened": "2025-04-10T08:23:29.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "StartCommand.cs",
-              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\StartCommand.cs",
-              "RelativeDocumentMoniker": "crokit\\Timer\\StartCommand.cs",
-              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\StartCommand.cs",
-              "RelativeToolTip": "crokit\\Timer\\StartCommand.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CroquisPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\CroquisPlayer.cs",
+              "RelativeDocumentMoniker": "crokit\\CroquisPlayer.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\CroquisPlayer.cs",
+              "RelativeToolTip": "crokit\\CroquisPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T08:24:32.775Z",
+              "WhenOpened": "2025-04-10T08:08:46.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TimerWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\TimerWindow.xaml.cs",
-              "RelativeDocumentMoniker": "crokit\\TimerWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\TimerWindow.xaml.cs",
-              "RelativeToolTip": "crokit\\TimerWindow.xaml.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TimerPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\TimerPlayer.cs",
+              "RelativeDocumentMoniker": "crokit\\Timer\\TimerPlayer.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\TimerPlayer.cs",
+              "RelativeToolTip": "crokit\\Timer\\TimerPlayer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvxcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T08:24:21.555Z",
+              "WhenOpened": "2025-04-10T08:08:21.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TimerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\TimerViewModel.cs",
+              "RelativeDocumentMoniker": "crokit\\Timer\\TimerViewModel.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\Timer\\TimerViewModel.cs",
+              "RelativeToolTip": "crokit\\Timer\\TimerViewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwK0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T08:08:11.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ImageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\image\\ImageViewModel.cs",
+              "RelativeDocumentMoniker": "crokit\\image\\ImageViewModel.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uB3D9\uC6B1\\Desktop\\crokit_v2\\crokit\\image\\ImageViewModel.cs",
+              "RelativeToolTip": "crokit\\image\\ImageViewModel.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T08:07:52.877Z",
               "EditorCaption": ""
             }
           ]
