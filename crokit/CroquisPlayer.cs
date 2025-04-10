@@ -14,7 +14,6 @@ namespace crokit
         private int _index = 0;
         private bool _running = false;
 
-        private _
 
         public CroquisPlayer()
         {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("crokit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50ff8915c06c982fc101b7506b9220ec190f0d08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87dba43cb96470cd471b92e0477de09d4b2757d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("crokit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("crokit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

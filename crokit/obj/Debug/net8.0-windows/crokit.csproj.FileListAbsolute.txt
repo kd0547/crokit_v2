@@ -62,3 +62,13 @@ C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.pdb
 C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.genruntimeconfig.cache
 C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\ref\crokit.dll
 C:\Users\김동욱\Desktop\crokit_v2\crokit\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.csproj.AssemblyReference.cache
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\TimerWindow.g.cs
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit_MarkupCompile.cache
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit_MarkupCompile.lref
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.dll
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\refint\crokit.dll
+C:\Users\dawon\OneDrive\바탕 화면\crokit_v2\crokit\obj\Debug\net8.0-windows\crokit.pdb
