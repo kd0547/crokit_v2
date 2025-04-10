@@ -101,8 +101,8 @@ namespace crokit.Timer
             _timer = timerPlayer;
             _timer.OnTick = ShowTimer;
             StartCommand = new StartCommand(Start, () => (!(Hour == "00" && Minute == "00" && Seconds == "00") && !IsRunning));
-            PauseCommand = new StartCommand(Pause, () => IsRunning);
-            StopCommand = new StartCommand(Stop, () => IsRunning || !_isStop);
+            PauseCommand = new StartCommand(Pause, () => IsRunning );
+            StopCommand = new StartCommand(Stop, () => IsRunning || _isPaused);
         }
 
         public void Start()
@@ -112,21 +112,17 @@ namespace crokit.Timer
             int m = int.Parse(Minute);
             int s = int.Parse(Seconds);
             _timer.SetTimer(h, m, s);
-
-            SaveTime(h, m, s);
+            SaveTime();
             IsRunning = true;
 
             OnStart?.Invoke();
         }
 
         private bool _isStop = true;
-
-        private void SaveTime(int h, int m, int s)
+        private bool _isPaused = false;
+        private void SaveTime()
         {
             if(_isStop) {
-                _saveHour = h;
-                _saveMinute = m;
-                _saveSecond = s;
                 _isStop = false;
             }
         }
@@ -139,16 +135,20 @@ namespace crokit.Timer
             {
                 return;
             }
+            _isPaused = true;
             IsTimeEditable = true;
             IsRunning = false;
-            //_timer.Stoptimer();
             OnPause?.Invoke();
-
         }
 
-        private int _saveHour = 0;
-        private int _saveMinute = 0;
-        private int _saveSecond = 0;
+        public void Finish()
+        {
+            IsRunning = false;
+            _isPaused = true;
+            IsTimeEditable = true;
+            ReloadTime(_timer.SaveHour, _timer.SaveMinute, _timer.SaveSecond);
+            _isStop = true;
+        }
 
         public void Stop()
         {
@@ -157,7 +157,8 @@ namespace crokit.Timer
             IsRunning = false;
             OnStop?.Invoke();
             IsTimeEditable = true;
-            ReloadTime(_saveHour, _saveMinute, _saveSecond);
+            ReloadTime(_timer.SaveHour, _timer.SaveMinute, _timer.SaveSecond);
+            _isStop = true;
 
         }
 

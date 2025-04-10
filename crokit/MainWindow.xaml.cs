@@ -47,8 +47,7 @@ namespace crokit
             timerWindow = new TimerWindow();
             timerWindow.DataContext = timerViewModel;
 
-            CroquisPlayer corquisPlayer = new CroquisPlayer();
-
+            croquisPlayer = new CroquisPlayer(imageViewModel,timerViewModel, timerPlayer);
 
         }
 
@@ -201,9 +200,7 @@ namespace crokit
      
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
             timerWindow.Show();
-            
         }
     }
 }

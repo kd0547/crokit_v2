@@ -41,6 +41,10 @@ namespace crokit.image
             LoadImagesCommand = new ImageLoadCommand(ImageLoad);
         }
 
+        public int TotalImage()
+        {
+            return UserImages.Count;
+        }
 
         public void ImageLoad()
         {
