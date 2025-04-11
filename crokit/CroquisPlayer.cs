@@ -41,20 +41,24 @@ namespace crokit
         public async void StartCroquisAsync() 
         {
             int count = _imageVIewModel.TotalImage();
-            count = 2;
             if (count == 0)
                 return;
+
+
             for(int i = 0; i < count; i++)
             {
-                if (_stop)
-                {
-                    _stop = false;
-                    return;
-                }
                 _timerPlayer.StartTimer();
                 Debug.WriteLine($"i: {i}, ThreadID: {System.Threading.Thread.CurrentThread.ManagedThreadId}");
-
-                await _timerPlayer.WaitUntilFinishedAsync();
+                _imageVIewModel.NextImageShow();
+                try
+                {
+                    await _timerPlayer.WaitUntilFinishedAsync();
+                }
+                catch (TaskCanceledException)
+                {
+                    Debug.WriteLine("사용자에 의해 타이머가 취소되었습니다.");
+                    return;
+                }
             }
             _timerVIewModel.Finish();
             //_timerPlayer.StopTimer();
@@ -64,7 +68,6 @@ namespace crokit
         public void StopCroquisAsync()
         {
             _timerPlayer.StopTimer();
-            _stop = true;
         }
 
         public void PauseCroquisAsync()

@@ -72,13 +72,17 @@ namespace crokit.Timer
 
         public void StartTimer()
         {
-            if(!_paused)
-            {
+            if (_timer.IsEnabled)
+                StopTimer(); // 이전 타이머가 있다면 반드시 중지
+
+            if (!_paused)
                 _remaining = _originTime;
-                _paused = false;
-                if (_tcs == null || _tcs.Task.IsCompleted)
-                    _tcs = new TaskCompletionSource<bool>();
-            }
+
+            _paused = false;
+
+            if (_tcs == null || _tcs.Task.IsCompleted)
+                _tcs = new TaskCompletionSource<bool>();
+
             _timer.Start();
         }
   
@@ -86,14 +90,13 @@ namespace crokit.Timer
         public void StopTimer()
         {
             _timer.Stop();
-            if (_tcs != null && !_tcs.Task.IsCompleted)
-            {
-                _tcs.TrySetResult(true);
-            }
-            _remaining = _originTime;
             _paused = false;
-            _tcs = null;
 
+            if (_tcs != null && !_tcs.Task.IsCompleted)
+                _tcs.TrySetCanceled();  // ← 사용자 중지 명확화
+
+            _tcs = null;
+            _remaining = _originTime;
         }
 
         public void PauseTimer()
@@ -101,6 +104,8 @@ namespace crokit.Timer
             _paused = true;
             _timer?.Stop();
         }
+
+
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
