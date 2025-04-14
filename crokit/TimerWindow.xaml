@@ -14,7 +14,7 @@
     ResizeMode="NoResize"
     Topmost="{Binding IsChecked, ElementName=TopMost_Button}"
     AllowsTransparency="True"
-    Title="TimerWindow"
+    Title="Timer"
     Height="150"
     Width="250">
     <Window.Resources>

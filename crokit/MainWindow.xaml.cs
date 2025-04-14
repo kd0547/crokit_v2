@@ -1,9 +1,12 @@
 ﻿using crokit.image;
 using crokit.Timer;
 using crokit.util;
+using MahApps.Metro.Controls;
 using Microsoft.Win32;
 using System.Collections;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,7 +21,18 @@ using System.Windows.Shapes;
 
 namespace crokit
 {
-    
+    enum ResizeDirection
+    {
+        None,
+        Left,
+        TopLeft,
+        Top,
+        TopRight,
+        Right,
+        BottomRight,
+        Bottom,
+        BottomLeft
+    }
 
     public partial class MainWindow : Window
     {
@@ -32,6 +46,7 @@ namespace crokit
         private TimerViewModel timerViewModel;
         private ImageViewModel imageViewModel;
         private CroquisPlayer croquisPlayer;
+        private ResizeDirection _resizeDirection = ResizeDirection.None;
 
         public MainWindow()
         {
@@ -47,7 +62,7 @@ namespace crokit
             timerWindow = new TimerWindow();
             timerWindow.DataContext = timerViewModel;
 
-            croquisPlayer = new CroquisPlayer(imageViewModel,timerViewModel, timerPlayer);
+            croquisPlayer = new CroquisPlayer(imageViewModel, timerViewModel, timerPlayer);
 
         }
 
@@ -78,7 +93,7 @@ namespace crokit
                 Multiselect = true
             };
             bool? result = openFileDialog.ShowDialog();
-            if (result == true) 
+            if (result == true)
             {
                 var vm = DataContext as ImageViewModel;
                 if (vm != null)
@@ -93,7 +108,7 @@ namespace crokit
             Image image = sender as Image;
             if (image != null)
             {
-                SelectedImage.Source = image.Source;  
+                SelectedImage.Source = image.Source;
             }
         }
 
@@ -103,7 +118,7 @@ namespace crokit
             if (itemControl == null)
                 return;
 
-            if(borderList != null)
+            if (borderList != null)
             {
                 foreach (var item in borderList)
                 {
@@ -114,7 +129,7 @@ namespace crokit
 
             selectionStart = e.GetPosition(itemControl);
             adornerLayer = AdornerLayer.GetAdornerLayer(itemControl);
-            if(adornerLayer != null)
+            if (adornerLayer != null)
             {
                 selectionAdorner = new DragSelectionAdorner(itemControl, selectionStart);
                 adornerLayer.Add(selectionAdorner);
@@ -197,10 +212,71 @@ namespace crokit
             }
             return null;
         }
-     
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             timerWindow.Show();
+        }
+
+        private void Windows_Drag(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
+        }
+
+        private void Border_MouseEnter(object sender, MouseEventArgs e)
+        {
+            _resizeDirection = GetResizeDirection(e.GetPosition(this));
+
+            switch (_resizeDirection) 
+            {
+                case ResizeDirection.Left:
+                case ResizeDirection.Right:
+                    this.Cursor = Cursors.SizeWE;
+                    break;
+                case ResizeDirection.Top:
+                case ResizeDirection.Bottom:
+                    this.Cursor = Cursors.SizeNS;
+                    break;
+                default: break;
+            }
+            
+        }
+
+        private ResizeDirection GetResizeDirection(Point position)
+        {
+            Debug.WriteLine(position.Y);
+            int index = 2;
+
+            if(position.X < index)
+            {
+                return ResizeDirection.Left;
+            } 
+            
+            if(position.X > (this.Width - index))
+            {
+                return ResizeDirection.Right;
+            }
+
+            if (position.Y < index)
+                return ResizeDirection.Top;
+            if (position.Y > this.ActualHeight - index)
+                return ResizeDirection.Bottom;
+
+            return ResizeDirection.None;
+        }
+
+        private void Border_MouseMove(object sender, MouseEventArgs e)
+        {
+            int index = 2;
+            Point position = e.GetPosition(this);
+            Debug.WriteLine(position.X + "Leave");
+
+            if (position.X > 2 && this.ActualWidth - index > position.X)
+            {
+                Debug.WriteLine(position.Y + "Leave");
+                this.Cursor = Cursors.Arrow;
+            }
         }
     }
 }

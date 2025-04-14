@@ -9,72 +9,223 @@
     xmlns:image="clr-namespace:crokit.image"
     Loaded="Window_Loaded"
     d:Background="#262626"
+    MouseDown="Windows_Drag"
     Title="crokit"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    ResizeMode="NoResize"
     Height="450"
     Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
-            <ColumnDefinition />
-            <ColumnDefinition Width="119*" />
+        <!-- 마우스 감지용 Border (보이지 않음) -->
+        <Border
+            Name="ResizeDetector"
+            Background="Transparent"
+            Margin="-2"
+            MouseEnter="Border_MouseEnter"
+            MouseMove="Border_MouseMove"
+            Panel.ZIndex="10" />
+        <Border
 
-        </Grid.ColumnDefinitions>
-        <Border Margin="2,2,2,2" BorderBrush="#FFB7B7B7" BorderThickness="1">
+            BorderThickness="1"
+            BorderBrush="RoyalBlue">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="13*" />
-                    <RowDefinition Height="201*" />
+                    <RowDefinition
+                        Height="30" />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Foreground="White" Margin="5,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" ><Run Text="Croquis List"/></TextBlock>
-                    <Button Background="{x:Null}" BorderBrush="{x:Null}" IsTabStop="False" Width="25" Height="25" HorizontalAlignment="Right"
-                        Command="{Binding LoadImagesCommand}">
-                        <Image Source="pack://application:,,,/Resources/add.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="20" Height="20"/>
-                    </Button>
-                </StackPanel>
-                <ScrollViewer Grid.Row="1"  PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" Margin="0,2,0,0">
-                    <ItemsControl x:Name="ImageItemsControl" MouseLeftButtonDown="ImageItemsControl_MouseLeftButtonDown"
-                  MouseMove="ImageItemsControl_MouseMove"
-                  MouseLeftButtonUp="ImageItemsControl_MouseLeftButtonUp" ItemsSource="{Binding UserImages}">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <!-- 이미지 크기는 필요에 따라 조정합니다.
+                <Grid
+                    Grid.Row="0">
+                    <StackPanel
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Width="64">
+                        <ToggleButton
+                            x:Name="TopMost_Button"
+                            Background="{x:Null}"
+                            BorderBrush="{x:Null}"
+                            HorizontalAlignment="Left"
+                            Width="32"
+                            Foreground="{x:Null}"
+                            IsChecked="False"
+                            IsTabStop="False"
+                            Focusable="False">
+                            <ToggleButton.Style>
+                                <Style
+                                    TargetType="{x:Type ToggleButton}">
+                                    <!-- 초기 상태는 Off (IsChecked=false) -->
+                                    <Setter
+                                        Property="IsChecked"
+                                        Value="False" />
+                                    <Setter
+                                        Property="Content">
+                                        <Setter.Value>
+                                            <Image
+                                                Source="pack://application:,,,/Resources/keep_off.png"
+                                                Height="20"
+                                                Width="20"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center" />
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger
+                                            Property="IsChecked"
+                                            Value="True">
+                                            <Setter
+                                                Property="Background"
+                                                Value="{x:Null}" />
+                                            <Setter
+                                                Property="Content">
+                                                <Setter.Value>
+                                                    <Image
+                                                        Source="pack://application:,,,/Resources/keep.png"
+                                                        Height="20"
+                                                        Width="20"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center" />
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ToggleButton.Style>
+                            <ToggleButton.Template>
+                                <ControlTemplate
+                                    TargetType="{x:Type ToggleButton}">
+                                    <ContentPresenter
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center" />
+                                </ControlTemplate>
+                            </ToggleButton.Template>
+                        </ToggleButton>
+                        <Button
+                            x:Name="Close_Button"
+                            Background="{x:Null}"
+                            BorderBrush="{x:Null}"
+                            HorizontalAlignment="Left"
+                            Width="32"
+                            IsTabStop="False">
+                            <Image
+                                Source="pack://application:,,,/Resources/close.png"
+                                Height="20"
+                                Width="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" />
+                        </Button>
+                    </StackPanel>
+
+                </Grid>
+                <Grid
+                    Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="200" />
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    <Border
+                        Margin="2,2,2,2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="13*" />
+                                <RowDefinition
+                                    Height="201*" />
+                            </Grid.RowDefinitions>
+                            <StackPanel
+                                Orientation="Horizontal">
+                                <TextBlock
+                                    Foreground="White"
+                                    Margin="5,0,0,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"><Run
+                                        Text="Croquis List" /></TextBlock>
+                                <Button
+                                    Background="{x:Null}"
+                                    BorderBrush="{x:Null}"
+                                    IsTabStop="False"
+                                    Width="25"
+                                    Height="25"
+                                    HorizontalAlignment="Right"
+                                    Command="{Binding LoadImagesCommand}">
+                                    <Image
+                                        Source="pack://application:,,,/Resources/add.png"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Width="20"
+                                        Height="20" />
+                                </Button>
+                            </StackPanel>
+                            <ScrollViewer
+                                Grid.Row="1"
+                                PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"
+                                Margin="0,2,0,0">
+                                <ItemsControl
+                                    x:Name="ImageItemsControl"
+                                    MouseLeftButtonDown="ImageItemsControl_MouseLeftButtonDown"
+                                    MouseMove="ImageItemsControl_MouseMove"
+                                    MouseLeftButtonUp="ImageItemsControl_MouseLeftButtonUp"
+                                    ItemsSource="{Binding UserImages}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <!-- 이미지 크기는 필요에 따라 조정합니다.
                  아래 예제에서는 고정 크기 50x50으로 설정했지만,
                  Auto 또는 Binding을 이용해 동적으로 조정할 수도 있습니다. -->
-                                <Border>
-                                    <Image Source="{Binding}" Width="75" Height="75"
-                                           Stretch="UniformToFill"
-                                           MouseLeftButtonDown="Image_MouseLeftButtonDown"
-                                           Margin="2">
-                                        <Image.Style>
-                                            <Style TargetType="Image">
-                                                <Setter Property="Opacity" Value="1" />
-                                                <Style.Triggers>
-                                                    <Trigger Property="IsMouseOver" Value="True">
-                                                        <Setter Property="Opacity" Value="0.7" />
-                                                    </Trigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </Image.Style>
-                                    </Image>
-                                </Border>
+                                            <Border>
+                                                <Image
+                                                    Source="{Binding}"
+                                                    Width="75"
+                                                    Height="75"
+                                                    Stretch="UniformToFill"
+                                                    MouseLeftButtonDown="Image_MouseLeftButtonDown"
+                                                    Margin="2">
+                                                    <Image.Style>
+                                                        <Style
+                                                            TargetType="Image">
+                                                            <Setter
+                                                                Property="Opacity"
+                                                                Value="1" />
+                                                            <Style.Triggers>
+                                                                <Trigger
+                                                                    Property="IsMouseOver"
+                                                                    Value="True">
+                                                                    <Setter
+                                                                        Property="Opacity"
+                                                                        Value="0.7" />
+                                                                </Trigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </Border>
 
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </ScrollViewer>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
 
+                        </Grid>
+
+                    </Border>
+                    <GridSplitter
+                        Grid.Column="1"
+                        Width="3"
+                        HorizontalAlignment="Center" />
+                    <Image
+                        x:Name="SelectedImage"
+                        Grid.Column="2"
+                        Source="{Binding NextImage ,UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
             </Grid>
-
-
         </Border>
-        <GridSplitter Grid.Column="1"  Width="3" HorizontalAlignment="Center"/>
-        <Image x:Name="SelectedImage" Grid.Column="2" Source="{Binding NextImage ,UpdateSourceTrigger=PropertyChanged}" />
-
     </Grid>
 </Window>
