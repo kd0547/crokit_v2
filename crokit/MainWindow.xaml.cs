@@ -6,6 +6,7 @@ using Microsoft.Win32;
 using System.Collections;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
@@ -13,6 +14,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
@@ -46,7 +48,6 @@ namespace crokit
         private TimerViewModel timerViewModel;
         private ImageViewModel imageViewModel;
         private CroquisPlayer croquisPlayer;
-        private ResizeDirection _resizeDirection = ResizeDirection.None;
 
         public MainWindow()
         {
@@ -218,64 +219,122 @@ namespace crokit
             timerWindow.Show();
         }
 
-        private void Windows_Drag(object sender, MouseButtonEventArgs e)
+     
+
+        private ResizeDirection GetResizeDirection(Point position,int index)
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                this.DragMove();
-        }
 
-        private void Border_MouseEnter(object sender, MouseEventArgs e)
-        {
-            _resizeDirection = GetResizeDirection(e.GetPosition(this));
+            bool left = position.X <= index;
+            bool right = position.X >= this.ActualWidth - index;
+            bool top = position.Y <= index;
+            bool bottom = position.Y >= this.ActualHeight - index;
 
-            switch (_resizeDirection) 
-            {
-                case ResizeDirection.Left:
-                case ResizeDirection.Right:
-                    this.Cursor = Cursors.SizeWE;
-                    break;
-                case ResizeDirection.Top:
-                case ResizeDirection.Bottom:
-                    this.Cursor = Cursors.SizeNS;
-                    break;
-                default: break;
-            }
-            
-        }
+            // 꼭짓점 (모서리)
+            if (left && top) return ResizeDirection.TopLeft;
+            if (right && top) return ResizeDirection.TopRight;
+            if (left && bottom) return ResizeDirection.BottomLeft;
+            if (right && bottom) return ResizeDirection.BottomRight;
 
-        private ResizeDirection GetResizeDirection(Point position)
-        {
-            Debug.WriteLine(position.Y);
-            int index = 2;
-
-            if(position.X < index)
-            {
-                return ResizeDirection.Left;
-            } 
-            
-            if(position.X > (this.Width - index))
-            {
-                return ResizeDirection.Right;
-            }
-
-            if (position.Y < index)
-                return ResizeDirection.Top;
-            if (position.Y > this.ActualHeight - index)
-                return ResizeDirection.Bottom;
+            // 가장자리
+            if (left) return ResizeDirection.Left;
+            if (right) return ResizeDirection.Right;
+            if (top) return ResizeDirection.Top;
+            if (bottom) return ResizeDirection.Bottom;
 
             return ResizeDirection.None;
         }
 
         private void Border_MouseMove(object sender, MouseEventArgs e)
         {
-            int index = 2;
-            Point position = e.GetPosition(this);
-            Debug.WriteLine(position.X + "Leave");
+            int index = 10;
 
-            if (position.X > 2 && this.ActualWidth - index > position.X)
+            Point position = e.GetPosition(this);
+            ResizeDirection _resizeDirection = GetResizeDirection(position, index);
+            Debug.WriteLine(_resizeDirection);
+
+            if ((position.X > index && this.ActualWidth - index > position.X)
+                && (position.Y > index && this.ActualHeight - index > position.Y))
             {
-                Debug.WriteLine(position.Y + "Leave");
                 this.Cursor = Cursors.Arrow;
+            }
+            else
+            {
+
+                switch (_resizeDirection)
+                {
+                    case ResizeDirection.BottomRight:
+                        this.Cursor = Cursors.SizeNWSE;
+                        break;
+                    case ResizeDirection.TopLeft:
+                        this.Cursor = Cursors.SizeNWSE;
+                        break;  
+                    case ResizeDirection.Left:
+                    case ResizeDirection.Right:
+                        this.Cursor = Cursors.SizeWE;
+                        break;
+                    case ResizeDirection.Top:
+                    case ResizeDirection.Bottom:
+                        this.Cursor = Cursors.SizeNS;
+                        break;
+                    default: break;
+                }
+
+            }
+
+            if(e.LeftButton == MouseButtonState.Pressed) {
+
+                ReleaseCapture();
+                var hWnd = new WindowInteropHelper(this).Handle;
+                switch (_resizeDirection)
+                {
+                    case ResizeDirection.Left:
+                        SendMessage(hWnd, WM_NCLBUTTONDOWN, (IntPtr)HTLEFT, IntPtr.Zero);
+                        break;
+                    case ResizeDirection.BottomRight:
+                        SendMessage(hWnd, WM_NCLBUTTONDOWN, (IntPtr)HTBOTTOMRIGHT, IntPtr.Zero);
+                        break;
+                    case ResizeDirection.Top:
+                        SendMessage(hWnd, WM_NCLBUTTONDOWN, (IntPtr)HTTOP, IntPtr.Zero);
+                        break;
+                    case ResizeDirection.Right:
+                        SendMessage(hWnd, WM_NCLBUTTONDOWN, (IntPtr)HTRIGHT, IntPtr.Zero);
+                        break;
+                    case ResizeDirection.Bottom:
+                        SendMessage(hWnd, WM_NCLBUTTONDOWN, (IntPtr)HTBOTTOM, IntPtr.Zero);
+                        break;
+                    case ResizeDirection.TopLeft:
+                        SendMessage(hWnd, WM_NCLBUTTONDOWN, (IntPtr)HTTOPLEFT, IntPtr.Zero);
+                        break;
+                    case ResizeDirection.TopRight:
+                        SendMessage(hWnd, WM_NCLBUTTONDOWN, (IntPtr)HTTOPRIGHT, IntPtr.Zero);
+                        break;
+                    case ResizeDirection.BottomLeft:
+                        SendMessage(hWnd, WM_NCLBUTTONDOWN, (IntPtr)HTBOTTOMLEFT, IntPtr.Zero);
+                        break;
+                }
+            }
+
+        }
+
+        [DllImport("user32.dll")]
+        private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
+
+        [DllImport("user32.dll")]
+        private static extern bool ReleaseCapture();
+
+        const int WM_NCLBUTTONDOWN = 0x00A1;
+        const int HTLEFT = 10;         // 왼쪽 테두리
+        const int HTRIGHT = 11;        // 오른쪽 테두리
+        const int HTTOP = 12;
+        const int HTBOTTOM = 15;
+        const int HTTOPLEFT = 13;
+        const int HTTOPRIGHT = 14;
+        const int HTBOTTOMLEFT = 16;
+        const int HTBOTTOMRIGHT = 17;
+        private void Windows_Resize(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ButtonState == MouseButtonState.Pressed)
+            {
             }
         }
     }

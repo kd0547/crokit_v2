@@ -6,30 +6,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:crokit"
     mc:Ignorable="d"
+    MouseMove="Border_MouseMove"
     xmlns:image="clr-namespace:crokit.image"
     Loaded="Window_Loaded"
     d:Background="#262626"
-    MouseDown="Windows_Drag"
     Title="crokit"
     WindowStyle="None"
     AllowsTransparency="True"
-    ResizeMode="NoResize"
     Height="450"
     Width="800">
     <Grid>
-        <!-- 마우스 감지용 Border (보이지 않음) -->
+        
         <Border
-            Name="ResizeDetector"
-            Background="Transparent"
-            Margin="-2"
-            MouseEnter="Border_MouseEnter"
-            MouseMove="Border_MouseMove"
-            Panel.ZIndex="10" />
-        <Border
-
             BorderThickness="1"
             BorderBrush="RoyalBlue">
-            <Grid>
+            <Grid
+                >
                 <Grid.RowDefinitions>
                     <RowDefinition
                         Height="30" />
@@ -227,5 +219,72 @@
                 </Grid>
             </Grid>
         </Border>
+        <!-- 마우스 감지용 Border (보이지 않음) -->
+        <!-- 마우스 감지용 Border: 위쪽 5픽셀 -->
+        <Border
+            Background="Transparent"
+            Height="5"
+            VerticalAlignment="Top"
+            MouseMove="Border_MouseMove"
+            Cursor="SizeNS"
+            Panel.ZIndex="10" />
+
+        <!-- 아래쪽 -->
+        <Border
+            Background="Transparent"
+            Height="5"
+            VerticalAlignment="Bottom"
+            MouseMove="Border_MouseMove"
+            Cursor="SizeNS"
+            Panel.ZIndex="10" />
+
+        <!-- 왼쪽 -->
+        <Border
+            Background="Transparent"
+            Width="5"
+            HorizontalAlignment="Left"
+            MouseMove="Border_MouseMove"
+            Cursor="SizeWE"
+            Panel.ZIndex="10" />
+
+        <!-- 오른쪽 -->
+        <Border
+            Background="Transparent"
+            Width="5"
+            HorizontalAlignment="Right"
+            MouseMove="Border_MouseMove"
+            Cursor="SizeWE"
+            Panel.ZIndex="10" />
+        <!-- 오른쪽 -->
+
+        <!-- 코너 (예: 오른쪽 아래 모서리) -->
+        <Border
+            Background="Transparent"
+            Width="10"
+            Height="10"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            MouseMove="Border_MouseMove"
+            MouseLeftButtonDown="Windows_Resize"
+            Cursor="SizeNWSE"
+            Panel.ZIndex="10" />
+
+        <Border
+            Background="Transparent"
+            Width="10"
+            Height="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            MouseMove="Border_MouseMove"
+            Cursor="SizeNWSE"
+            Panel.ZIndex="10" />
+        <!--
+        <Border
+            Name="ResizeDetector"
+            Background="Transparent"
+            Margin="-2"
+            MouseMove="Border_MouseMove"
+            Panel.ZIndex="10" />
+-->
     </Grid>
 </Window>
